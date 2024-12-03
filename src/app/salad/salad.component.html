@@ -1,9 +1,18 @@
 <h3>Welcome {{ order.name() }}</h3>
 
+@if(toppings$ | async; as toppings) {
 <app-toppings
-  *ngIf="toppings$ | async as toppings; else loading"
   [toppings]="toppings"
   (selectTopping)="selectTopping($event)"
 ></app-toppings>
+} @else {
+  Loading toppings...
+}
 
-<ng-template #loading> Loading toppings... </ng-template>
+
+<h3>Total Price : {{ saladService.totalPrice() }}</h3>
+
+<app-ingredients
+  [ingredients]="saladService.chosenToppings()"
+  (removeTopping)="removeTopping($event)"
+></app-ingredients>

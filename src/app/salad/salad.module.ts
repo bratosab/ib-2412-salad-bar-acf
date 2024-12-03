@@ -5,12 +5,14 @@ import { SaladRoutingModule } from './salad-routing.module';
 import { SaladComponent } from './salad.component';
 import { ToppingsComponent } from './toppings/toppings.component';
 import { KitchenModule } from '../kitchen/kitchen.module';
+import { IngredientsComponent } from './ingredients/ingredients.component';
 
 
 @NgModule({
   declarations: [
     SaladComponent,
-    ToppingsComponent
+    ToppingsComponent,
+    IngredientsComponent
   ],
   imports: [
     CommonModule,

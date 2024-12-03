@@ -22,6 +22,10 @@ export class SaladComponent {
   }
 
   selectTopping(topping: Topping) {
-    console.log(topping)
+    this.saladService.chooseTopping(topping)
+  }
+
+  removeTopping(id: number){
+    this.saladService.removeTopping(id)
   }
 }
