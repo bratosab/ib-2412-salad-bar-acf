@@ -9,19 +9,17 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    OrderComponent
-  ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    SaladModule,
-    ReactiveFormsModule
-  ],
-  providers: [
-    provideHttpClient()
-  ],
-  bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        SaladModule,
+        ReactiveFormsModule,
+        OrderComponent
+    ],
+    providers: [
+        provideHttpClient()
+    ],
+    bootstrap: [AppComponent]
 })
 export class AppModule { }

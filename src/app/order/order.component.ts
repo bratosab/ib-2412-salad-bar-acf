@@ -1,12 +1,14 @@
 import { Component, inject } from '@angular/core';
-import { FormBuilder, Validators } from '@angular/forms';
+import { FormBuilder, Validators, ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { OrderService } from '../services/order.service';
 
 @Component({
-  selector: 'app-order',
-  templateUrl: './order.component.html',
-  styleUrl: './order.component.scss'
+    selector: 'app-order',
+    templateUrl: './order.component.html',
+    styleUrl: './order.component.scss',
+    standalone: true,
+    imports: [ReactiveFormsModule]
 })
 export class OrderComponent {
   private fb = inject(FormBuilder)

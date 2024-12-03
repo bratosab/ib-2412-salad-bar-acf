@@ -9,14 +9,12 @@ import { IngredientsComponent } from './ingredients/ingredients.component';
 
 
 @NgModule({
-  declarations: [
-    SaladComponent,
-    ToppingsComponent,
-    IngredientsComponent
-  ],
-  imports: [
-    CommonModule,
-    SaladRoutingModule
-  ]
+    imports: [
+        CommonModule,
+        SaladRoutingModule,
+        SaladComponent,
+        ToppingsComponent,
+        IngredientsComponent
+    ]
 })
 export class SaladModule { }
