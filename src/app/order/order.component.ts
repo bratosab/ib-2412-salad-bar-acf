@@ -20,8 +20,8 @@ export class OrderComponent {
 
   startOrder() {
     if(this.orderForm.valid) {
-      this.order.name = this.orderForm.value.name as string
-      this.order.tel = this.orderForm.value.tel as string
+      this.order.name.set(this.orderForm.value.name as string)
+      this.order.tel.set(this.orderForm.value.tel as string)
       this.router.navigate(['salad'])
     }
   }
