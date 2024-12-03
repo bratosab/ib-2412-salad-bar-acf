@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SaladModule } from './salad/salad.module';
 import { OrderComponent } from './order/order.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { provideHttpClient } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     SaladModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    provideHttpClient()
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

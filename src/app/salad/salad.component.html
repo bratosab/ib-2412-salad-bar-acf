@@ -1,1 +1,9 @@
 <h3>Welcome {{ order.name }}</h3>
+
+<app-toppings
+  *ngIf="toppings$ | async as toppings; else loading"
+  [toppings]="toppings"
+  (selectTopping)="selectTopping($event)"
+></app-toppings>
+
+<ng-template #loading> Loading toppings... </ng-template>
