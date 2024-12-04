@@ -16,6 +16,7 @@ import { provideStoreDevtools } from '@ngrx/store-devtools';
 import { appReducer } from './store/app.state';
 import { saladReducer } from './salad/store/salad.reducer';
 import { loadToppings } from './salad/store/salad.effects';
+import { provideServiceWorker } from '@angular/service-worker';
 
 export const config: ApplicationConfig = {
   providers: [
@@ -29,5 +30,9 @@ export const config: ApplicationConfig = {
     provideEffects({ loadToppings }),
     provideRouterStore(),
     provideStoreDevtools({ maxAge: 25, logOnly: !isDevMode() }),
+    provideServiceWorker('ngsw-worker.js', {
+      enabled: true,
+      registrationStrategy: 'registerWhenStable:30000',
+    }),
   ],
 };
