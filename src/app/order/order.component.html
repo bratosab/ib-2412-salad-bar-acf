@@ -1,6 +1,6 @@
 <form [formGroup]="orderForm" (ngSubmit)="startOrder()">
     <label for="name">What is your name ?</label>
-    <input type="text" id="name" formControlName="name">
+    <input type="text" id="name" formControlName="name" data-cy="inputName">
    
     <label for="tel">What is your tel ?</label>
     <input type="text" id="tel" formControlName="tel">
